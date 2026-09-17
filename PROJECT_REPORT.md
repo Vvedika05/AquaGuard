@@ -152,7 +152,13 @@ Cross-validation results are stored in `outputs/model_comparison.csv`.
 
 | Model | Accuracy | Precision | Recall | F1 | ROC-AUC | Non-Potable Recall |
 |---|---:|---:|---:|---:|---:|---:|
-| Support Vector Machine | 0.667 | 0.573 | 0.569 | 0.571 | 0.703 | 0.729 |\n| XGBoost | 0.661 | 0.606 | 0.379 | 0.466 | 0.671 | 0.842 |\n| Random Forest | 0.674 | 0.648 | 0.362 | 0.465 | 0.695 | 0.874 |\n| K-Nearest Neighbors | 0.641 | 0.583 | 0.278 | 0.376 | 0.654 | 0.873 |\n| Decision Tree | 0.626 | 0.540 | 0.270 | 0.360 | 0.593 | 0.853 |\n| Logistic Regression | 0.610 | 0.000 | 0.000 | 0.000 | 0.476 | 1.000 |\n
+| Support Vector Machine | 0.667 | 0.573 | 0.569 | 0.571 | 0.703 | 0.729 |
+| XGBoost | 0.661 | 0.606 | 0.379 | 0.466 | 0.671 | 0.842 |
+| Random Forest | 0.674 | 0.648 | 0.362 | 0.465 | 0.695 | 0.874 |
+| K-Nearest Neighbors | 0.641 | 0.583 | 0.278 | 0.376 | 0.654 | 0.873 |
+| Decision Tree | 0.626 | 0.540 | 0.270 | 0.360 | 0.593 | 0.853 |
+| Logistic Regression | 0.610 | 0.000 | 0.000 | 0.000 | 0.476 | 1.000 |
+
 ## 14. Best Model Selection
 
 The selected model is **Support Vector Machine**.
