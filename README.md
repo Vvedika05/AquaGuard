@@ -242,6 +242,28 @@ Open **Live Monitoring**:
 
 The simulation calls the persisted model for the current readings; it does not display prerecorded prediction results.
 
+## Tech Stack
+
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- XGBoost
+- Matplotlib
+- Streamlit
+- Joblib
+
+## Machine Learning
+
+- Logistic Regression
+- K-Nearest Neighbors
+- Decision Tree
+- Random Forest
+- Support Vector Machine
+- XGBoost
+- PCA
+- Stratified 5-Fold Cross-Validation
+  
 ## Limitations
 
 - The model reflects patterns in the supplied dataset and may not generalize to other water sources, regions, instruments, or laboratory protocols.
