@@ -18,7 +18,7 @@ Water-quality measurements can vary across physical and chemical parameters. The
 - Compare six classification algorithms.
 - Select the final model using a predefined F1-based selection rule.
 - Persist preprocessing and classification together in one pipeline.
-- Provide real-time prediction for new user input.
+- Provide interactive prediction for new user input.
 - Demonstrate a live monitoring simulation without retraining the model.
 
 ## Dataset
