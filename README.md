@@ -92,7 +92,7 @@ PCA was fitted only on standardized numeric training data for analysis.
 - Components explaining at least 80% cumulative variance: **7**
 - Components explaining at least 90% cumulative variance: **8**
 
-PCA is **not included in the final production pipeline.**. It is retained as an analytical dimensionality-reduction component because the production pipeline is evaluated in the original feature space and the project prioritizes interpretability and direct use of the measured parameters.
+PCA is **not included in the final production pipeline.** It is retained as an analytical dimensionality-reduction component because the production pipeline is evaluated in the original feature space and the project prioritizes interpretability and direct use of the measured parameters.
 
 ## Machine Learning Models
 
