@@ -88,7 +88,7 @@ PCA was fitted only on standardized numeric training data for analysis.
 - Components explaining at least 80% cumulative variance: **7**
 - Components explaining at least 90% cumulative variance: **8**
 
-PCA is **not forced into the final production classifier**. It is retained as an analytical dimensionality-reduction component because the production pipeline is evaluated in the original feature space and the project prioritizes interpretability and direct use of the measured parameters.
+PCA is **not included in the final production pipeline.**. It is retained as an analytical dimensionality-reduction component because the production pipeline is evaluated in the original feature space and the project prioritizes interpretability and direct use of the measured parameters.
 
 ## Machine Learning Models
 
@@ -282,6 +282,3 @@ The simulation calls the persisted model for the current readings; it does not d
 - Add secure data storage and audit trails.
 - Compare against additional tuned ensemble models.
 
-## Academic Disclaimer
-
-AquaGuard is an academic machine-learning demonstration. Predictions are based on patterns learned from the supplied dataset and should not replace laboratory water-quality testing or regulatory assessment.
