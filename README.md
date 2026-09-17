@@ -36,6 +36,14 @@ Missing values were observed in:
 - `Sulfate`: 781
 - `Trihalomethanes`: 162
 
+## Dataset Source
+
+The dataset used in AquaGuard was obtained from Kaggle:
+
+**Water Potability Dataset — Aditya Kadiwal**
+
+https://www.kaggle.com/datasets/adityakadiwal/water-potability/data
+
 ## Features
 
 The model inputs are:
