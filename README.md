@@ -6,6 +6,10 @@ AquaGuard is an end-to-end academic machine-learning application that classifies
 
 > **Academic disclaimer:** AquaGuard is an academic machine-learning demonstration. Predictions are based on patterns learned from the supplied dataset and should not replace laboratory water-quality testing or regulatory assessment.
 
+## Live Demo
+
+**AquaGuard:** [Open the live application](https://aquaguard-ml.streamlit.app/)
+
 ## Problem Statement
 
 Water-quality measurements can vary across physical and chemical parameters. The project demonstrates how supervised classification can learn patterns in labelled water-quality data and provide an interactive prediction for a new sample.
