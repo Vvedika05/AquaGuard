@@ -1,0 +1,11 @@
+column,dtype,missing_count,missing_percent,unique_values,constant_column
+ph,float64,491,14.9878,2785,False
+Hardness,float64,0,0.0,3276,False
+Solids,float64,0,0.0,3276,False
+Chloramines,float64,0,0.0,3276,False
+Sulfate,float64,781,23.84,2495,False
+Conductivity,float64,0,0.0,3276,False
+Organic_carbon,float64,0,0.0,3276,False
+Trihalomethanes,float64,162,4.9451,3114,False
+Turbidity,float64,0,0.0,3276,False
+Potability,int64,0,0.0,2,False

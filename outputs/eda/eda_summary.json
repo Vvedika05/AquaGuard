@@ -1,0 +1,44 @@
+{
+    "rows": 3276,
+    "columns": 10,
+    "features_analyzed": [
+        "ph",
+        "Hardness",
+        "Solids",
+        "Chloramines",
+        "Sulfate",
+        "Conductivity",
+        "Organic_carbon",
+        "Trihalomethanes",
+        "Turbidity"
+    ],
+    "target": "Potability",
+    "duplicate_rows": 0,
+    "missing_values": {
+        "ph": 491,
+        "Sulfate": 781,
+        "Trihalomethanes": 162
+    },
+    "top_features_by_absolute_target_correlation": [
+        {
+            "feature": "Solids",
+            "absolute_correlation": 0.033743,
+            "signed_correlation": 0.033743
+        },
+        {
+            "feature": "Organic_carbon",
+            "absolute_correlation": 0.030001,
+            "signed_correlation": -0.030001
+        },
+        {
+            "feature": "Chloramines",
+            "absolute_correlation": 0.023779,
+            "signed_correlation": 0.023779
+        },
+        {
+            "feature": "Sulfate",
+            "absolute_correlation": 0.023577,
+            "signed_correlation": -0.023577
+        }
+    ]
+}

@@ -1,0 +1,267 @@
+{
+  "project_name": "AquaGuard \u2014 Real-Time Water Safety Monitoring & Classification System",
+  "problem_type": "Binary Classification",
+  "task": "Predict whether a water sample is potable based on supplied water-quality measurements.",
+  "target_column": "Potability",
+  "target_mapping": {
+    "0": "Non-Potable",
+    "1": "Potable"
+  },
+  "selected_model": "Support Vector Machine",
+  "selection_metric": "F1",
+  "selection_rule": "Select the model with the highest 5-fold cross-validated F1-score on the training split; F1 balances precision and recall and avoids selecting a degenerate classifier that predicts only one class.",
+  "validation_test_strategy": {
+    "test_size": 0.2,
+    "random_state": 42,
+    "stratified": true,
+    "cv": "5-fold StratifiedKFold on training split",
+    "test_set_used_only_for_final_selected_model_evaluation": true
+  },
+  "input_features": [
+    "ph",
+    "Hardness",
+    "Solids",
+    "Chloramines",
+    "Sulfate",
+    "Conductivity",
+    "Organic_carbon",
+    "Trihalomethanes",
+    "Turbidity"
+  ],
+  "engineered_features": [],
+  "feature_engineering_note": "No additional domain-derived features were added; the supplied measurements are retained to avoid unnecessary transformations and leakage.",
+  "preprocessing_steps": [
+    "Numeric median imputation",
+    "Numeric StandardScaler",
+    "Categorical most-frequent imputation",
+    "Categorical OneHotEncoder(handle_unknown='ignore')",
+    "All preprocessing is stored inside the persisted pipeline."
+  ],
+  "pca_analysis": {
+    "numeric_features": [
+      "ph",
+      "Hardness",
+      "Solids",
+      "Chloramines",
+      "Sulfate",
+      "Conductivity",
+      "Organic_carbon",
+      "Trihalomethanes",
+      "Turbidity"
+    ],
+    "components": 9,
+    "explained_variance_ratio": [
+      0.13687875552646087,
+      0.12498008851334295,
+      0.1177141233959405,
+      0.1127530067647955,
+      0.10978178492892626,
+      0.10865523718451942,
+      0.10513155114473154,
+      0.0988854214186493,
+      0.08522003112263364
+    ],
+    "cumulative_explained_variance": [
+      0.13687875552646087,
+      0.2618588440398038,
+      0.3795729674357443,
+      0.4923259742005398,
+      0.6021077591294661,
+      0.7107629963139855,
+      0.815894547458717,
+      0.9147799688773663,
+      1.0
+    ],
+    "components_for_80_percent": 7,
+    "components_for_90_percent": 8
+  },
+  "model_metrics": {
+    "cross_validated_comparison": [
+      {
+        "Model": "Support Vector Machine",
+        "Accuracy": 0.666793893129771,
+        "Precision": 0.5733990147783251,
+        "Recall": 0.5694716242661448,
+        "F1": 0.5714285714285714,
+        "ROC_AUC": 0.7031119501137675,
+        "NonPotable_Recall": 0.7290362953692116,
+        "Selection_Metric": 0.5714285714285714
+      },
+      {
+        "Model": "XGBoost",
+        "Accuracy": 0.6645038167938931,
+        "Precision": 0.6098310291858678,
+        "Recall": 0.388454011741683,
+        "F1": 0.474596533173939,
+        "ROC_AUC": 0.6694455398014642,
+        "NonPotable_Recall": 0.8410513141426783,
+        "Selection_Metric": 0.474596533173939
+      },
+      {
+        "Model": "Random Forest",
+        "Accuracy": 0.6744274809160306,
+        "Precision": 0.647985989492119,
+        "Recall": 0.36203522504892366,
+        "F1": 0.4645323289391086,
+        "ROC_AUC": 0.6951411867574193,
+        "NonPotable_Recall": 0.8742177722152691,
+        "Selection_Metric": 0.4645323289391086
+      },
+      {
+        "Model": "K-Nearest Neighbors",
+        "Accuracy": 0.6408396946564886,
+        "Precision": 0.5831622176591376,
+        "Recall": 0.27788649706457924,
+        "F1": 0.3764082173624917,
+        "ROC_AUC": 0.654144796945301,
+        "NonPotable_Recall": 0.8729662077596996,
+        "Selection_Metric": 0.3764082173624917
+      },
+      {
+        "Model": "Decision Tree",
+        "Accuracy": 0.6255725190839695,
+        "Precision": 0.5401174168297456,
+        "Recall": 0.2700587084148728,
+        "F1": 0.36007827788649704,
+        "ROC_AUC": 0.5930780648021376,
+        "NonPotable_Recall": 0.8529411764705882,
+        "Selection_Metric": 0.36007827788649704
+      },
+      {
+        "Model": "Logistic Regression",
+        "Accuracy": 0.6099236641221374,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "ROC_AUC": 0.4756924629367924,
+        "NonPotable_Recall": 1.0,
+        "Selection_Metric": 0.0
+      }
+    ],
+    "held_out_test": {
+      "Accuracy": 0.6219512195121951,
+      "Precision": 0.5158730158730159,
+      "Recall": 0.5078125,
+      "F1": 0.5118110236220472,
+      "ROC_AUC": 0.6439746093749998,
+      "NonPotable_Recall": 0.695
+    }
+  },
+  "dataset": {
+    "original_shape": [
+      3276,
+      10
+    ],
+    "cleaned_shape": [
+      3276,
+      10
+    ],
+    "training_shape": [
+      2620,
+      9
+    ],
+    "test_shape": [
+      656,
+      9
+    ],
+    "missing_values": {
+      "ph": 491,
+      "Hardness": 0,
+      "Solids": 0,
+      "Chloramines": 0,
+      "Sulfate": 781,
+      "Conductivity": 0,
+      "Organic_carbon": 0,
+      "Trihalomethanes": 162,
+      "Turbidity": 0,
+      "Potability": 0
+    },
+    "duplicates": 0
+  },
+  "training_timestamp": "2026-09-17 02:43:35",
+  "python_version": "3.12.10",
+  "package_versions": {
+    "pandas": "2.2.3",
+    "numpy": "2.3.5",
+    "scikit_learn": "1.8.0",
+    "joblib": "1.5.3"
+  },
+  "xgboost_version": "3.1.3",
+  "feature_ranges": {
+    "ph": {
+      "min": 0.2274990502021987,
+      "max": 13.54124023656798,
+      "median": 7.035036795196814,
+      "p05": 4.435569954630402,
+      "p95": 9.808953462109354
+    },
+    "Hardness": {
+      "min": 47.432,
+      "max": 323.124,
+      "median": 196.92806093779086,
+      "p05": 142.2771462352828,
+      "p95": 250.4272109913318
+    },
+    "Solids": {
+      "min": 320.942611274359,
+      "max": 61227.19600771213,
+      "median": 20866.335842223954,
+      "p05": 9257.117267880578,
+      "p95": 38417.14024742052
+    },
+    "Chloramines": {
+      "min": 0.3520000000000003,
+      "max": 13.043806107761023,
+      "median": 7.118161983426347,
+      "p05": 4.437973023499392,
+      "p95": 9.772645958986498
+    },
+    "Sulfate": {
+      "min": 129.00000000000003,
+      "max": 481.0306423059972,
+      "median": 333.073545745888,
+      "p05": 266.9907934634154,
+      "p95": 403.8643913396832
+    },
+    "Conductivity": {
+      "min": 181.483753985146,
+      "max": 753.3426195583046,
+      "median": 424.94133573042495,
+      "p05": 300.0603577567047,
+      "p95": 567.035993961412
+    },
+    "Organic_carbon": {
+      "min": 2.1999999999999886,
+      "max": 27.00670661116601,
+      "median": 14.214779561341032,
+      "p05": 8.828229045492417,
+      "p95": 19.638044403271188
+    },
+    "Trihalomethanes": {
+      "min": 0.7379999999999995,
+      "max": 124.0,
+      "median": 66.56570894421057,
+      "p05": 38.90726106014518,
+      "p95": 91.85985151065405
+    },
+    "Turbidity": {
+      "min": 1.4922066153042484,
+      "max": 6.739,
+      "median": 3.9696018473949692,
+      "p05": 2.6881566568471396,
+      "p95": 5.224802561727389
+    }
+  },
+  "training_medians": {
+    "ph": 7.035036795196814,
+    "Hardness": 196.92806093779086,
+    "Solids": 20866.335842223954,
+    "Chloramines": 7.118161983426347,
+    "Sulfate": 333.073545745888,
+    "Conductivity": 424.94133573042495,
+    "Organic_carbon": 14.214779561341032,
+    "Trihalomethanes": 66.56570894421057,
+    "Turbidity": 3.9696018473949692
+  },
+  "runtime_seconds": 29.06
+}

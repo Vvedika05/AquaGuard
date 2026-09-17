@@ -1,0 +1,27 @@
+{
+  "original_shape": [
+    3276,
+    10
+  ],
+  "duplicate_rows_found": 0,
+  "duplicates_removed": 0,
+  "shape_after_duplicate_handling": [
+    3276,
+    10
+  ],
+  "missing_value_treatment": "Median imputation for numeric features and most-frequent imputation for categorical features inside the training pipeline. No rows removed for missingness.",
+  "outlier_treatment": "Outliers were analyzed using IQR fences and retained because extreme measurements can be legitimate observations; no blanket row deletion was applied.",
+  "impossible_value_checks": "pH values outside [0,14] and negative numeric measurements were checked. Findings are recorded below.",
+  "impossible_value_counts": {
+    "ph_negative_count": 0,
+    "Hardness_negative_count": 0,
+    "Solids_negative_count": 0,
+    "Chloramines_negative_count": 0,
+    "Sulfate_negative_count": 0,
+    "Conductivity_negative_count": 0,
+    "Organic_carbon_negative_count": 0,
+    "Trihalomethanes_negative_count": 0,
+    "Turbidity_negative_count": 0,
+    "ph_outside_0_14": 0
+  }
+}

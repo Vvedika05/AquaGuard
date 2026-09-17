@@ -1,0 +1,38 @@
+{
+  "numeric_features": [
+    "ph",
+    "Hardness",
+    "Solids",
+    "Chloramines",
+    "Sulfate",
+    "Conductivity",
+    "Organic_carbon",
+    "Trihalomethanes",
+    "Turbidity"
+  ],
+  "components": 9,
+  "explained_variance_ratio": [
+    0.13687875552646087,
+    0.12498008851334295,
+    0.1177141233959405,
+    0.1127530067647955,
+    0.10978178492892626,
+    0.10865523718451942,
+    0.10513155114473154,
+    0.0988854214186493,
+    0.08522003112263364
+  ],
+  "cumulative_explained_variance": [
+    0.13687875552646087,
+    0.2618588440398038,
+    0.3795729674357443,
+    0.4923259742005398,
+    0.6021077591294661,
+    0.7107629963139855,
+    0.815894547458717,
+    0.9147799688773663,
+    1.0
+  ],
+  "components_for_80_percent": 7,
+  "components_for_90_percent": 8
+}
